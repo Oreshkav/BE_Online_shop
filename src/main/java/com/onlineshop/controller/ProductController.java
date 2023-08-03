@@ -21,26 +21,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/product")
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
+  @Autowired
+  private ProductService productService;
 
-    @GetMapping("/all")
-    public ProductsDTO findAll() {
-        return productService.findAll();
-    }
+  @GetMapping("/all")
+  public ProductsDTO findAll() {
+    return productService.findAll();
+  }
 
-    @GetMapping("/{id}")
-    public ProductDTO findById(@PathVariable Integer id) {
-        return productService.findById(id);
-    }
+  @GetMapping("/{id}")
+  public ProductDTO findById(@PathVariable Integer id) {
+    return productService.findById(id);
+  }
 
-    @GetMapping("/description/{partDescription}")
-    public ProductsDTO findByPartDescription(@PathVariable String partDescription) {
-        return productService.findByPartDescription(partDescription);
-    }
+  @GetMapping("/description/{partDescription}")
+  public ProductsDTO findByPartDescription(@PathVariable String partDescription) {
+    return productService.findByPartDescription(partDescription);
+  }
 
-    @GetMapping("/all/category/{categoryId}")
-    public ProductsDTO findByCategory(@PathVariable Integer categoryId) {
-        return productService.findByCategoryId(categoryId);
-    }
+  @GetMapping("/all/category/{categoryId}")
+  public ProductsDTO findByCategory(@PathVariable Integer categoryId) {
+    return productService.findByCategoryId(categoryId);
+  }
 }

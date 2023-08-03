@@ -12,14 +12,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Supplier {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer supplierId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer supplierId;
 
-    private String supplierName;
-    private String address;
+  private String supplierName;
+  private String address;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
-    @JoinColumn(name = "countryId", nullable = false)
-    private Country country;
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
+  @JoinColumn(name = "countryId", nullable = false)
+  private Country country;
 }

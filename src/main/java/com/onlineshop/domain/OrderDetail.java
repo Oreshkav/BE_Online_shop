@@ -18,17 +18,17 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 public class OrderDetail {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer orderDetailId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer orderDetailId;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Order.class)
-    @JoinColumn(name = "orderId", nullable = false)
-    private Order order;
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = Order.class)
+  @JoinColumn(name = "orderId", nullable = false)
+  private Order order;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Product.class)
-    @JoinColumn(name = "productId", nullable = false)
-    private Product product;
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = Product.class)
+  @JoinColumn(name = "productId", nullable = false)
+  private Product product;
 
-    private Integer quantity;
+  private Integer quantity;
 }

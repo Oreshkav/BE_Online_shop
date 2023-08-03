@@ -19,14 +19,14 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 public class Order {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer orderId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer orderId;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Customer.class)
-    @JoinColumn(name = "customerId", nullable = false)
-    private Customer customer;
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = Customer.class)
+  @JoinColumn(name = "customerId", nullable = false)
+  private Customer customer;
 
-    private OffsetDateTime orderDate;
-    private OrderState state;
+  private OffsetDateTime orderDate;
+  private OrderState state;
 }

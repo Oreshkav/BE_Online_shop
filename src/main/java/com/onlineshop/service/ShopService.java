@@ -35,7 +35,7 @@ public class ShopService {
   public ShopDTO update(Integer id, ShopDTO shopDTO) {
 
     Optional<Shop> shop = shopRepository.findById(id);
-    if(shop.isPresent()) {
+    if (shop.isPresent()) {
       Shop updShop = shop.get();
       updShop.setShopName(shopDTO.getShopName());
       updShop = shopRepository.save(updShop);
@@ -47,7 +47,7 @@ public class ShopService {
 
   public ShopDTO delete(Integer id) {
     Optional<Shop> shop = shopRepository.findById(id);
-    if(shop.isPresent()) {
+    if (shop.isPresent()) {
       Shop delShop = shop.get();
       shopRepository.delete(delShop);
 

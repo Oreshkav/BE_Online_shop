@@ -15,10 +15,10 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Category {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer categoryId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer categoryId;
 
-    private String categoryName;
-    private String description;
+  private String categoryName;
+  private String description;
 }

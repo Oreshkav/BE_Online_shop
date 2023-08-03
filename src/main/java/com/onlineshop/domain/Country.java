@@ -15,9 +15,9 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Country {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer countryId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer countryId;
 
-    private String countryName;
+  private String countryName;
 }

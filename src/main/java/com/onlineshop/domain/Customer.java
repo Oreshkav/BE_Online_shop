@@ -18,14 +18,14 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 public class Customer {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer customerId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer customerId;
 
-    private String customerName;
-    private String address;
+  private String customerName;
+  private String address;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
-    @JoinColumn(name = "countryId", nullable = false)
-    private Country country;
+  @ManyToOne(fetch = FetchType.LAZY, targetEntity = Country.class)
+  @JoinColumn(name = "countryId", nullable = false)
+  private Country country;
 }

@@ -15,9 +15,9 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Shop {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer shopId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer shopId;
 
-    private String shopName;
+  private String shopName;
 }
