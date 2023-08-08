@@ -184,7 +184,7 @@ Ref: products_in_shop.shop_id > shops.shop_id
                                  referencedColumnNames="country_id"/>
     </changeSet>
 
-    <changeSet id="#2" author="sergey">
+  <!--  <changeSet id="#2" author="sergey">
         <loadData tableName="countries"
                   separator=","
                   file="db/data/countries.csv">
@@ -213,6 +213,6 @@ Ref: products_in_shop.shop_id > shops.shop_id
                   separator=","
                   file="db/data/customers.csv">
         </loadData>
-    </changeSet>
+    </changeSet> -->
 
 </databaseChangeLog>
